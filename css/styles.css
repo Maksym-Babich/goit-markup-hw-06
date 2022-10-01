@@ -454,7 +454,9 @@ a {
 .clients-list-item > a {
   color: var(--social-net-link-color);
   border: 1px solid currentColor;
-  padding: 16px 32px;
+  /* width: 170px;
+  height: 92px; */
+  padding: 15px 31px;
   transition: color var(--anim-time) var(--anim-func);
 }
 
@@ -487,6 +489,10 @@ a {
 .foo-contacts {
   margin-right: 70px;
   width: 231px;
+}
+
+.foo-social-net {
+  margin-right: 93px;
 }
 
 .foo-nav {
@@ -564,6 +570,56 @@ a {
 
 .foo-social-net-links svg {
   fill: currentColor;
+}
+
+.subscribe-form-name {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white-text-color);
+
+  margin-bottom: 20px;
+}
+
+.subscribe-input {
+  background-color: transparent;
+  padding: 0 16px;
+  margin-right: 12px;
+  width: 354px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--white-text-color);
+}
+
+.subscribe-input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.foo-form .button {
+  padding: 0;
+}
+
+.btn-text {
+  padding: 10px 28px;
+  display: flex;
+  align-items: center;
+}
+
+.btn-text > span {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  width: 110px;
+
+  margin-right: 10px;
 }
 
 /* portfolio styles */
@@ -764,4 +820,15 @@ a {
 
 .is-hidden .modal-window {
   transform: translate(-50%, -50%) scale(1.2, 1.2);
+}
+
+.get-contacts-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-item {
+  display: block;
 }

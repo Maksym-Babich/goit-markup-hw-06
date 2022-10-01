@@ -445,8 +445,23 @@
             </li>
           </ul>
         </div>
+        <form name="subscribe" class="foo-form">
+          <p class="subscribe-form-name">Підпишіться на розсилку</p>
+          <input type="email" autocomplete="email" placeholder="E-mail" class="subscribe-input" />
+          <button type="submit" class="button">
+            <div class="btn-text">
+              <span>Підписатися</span>
+              <svg width="24" height="24">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </div>
+          </button>
+        </form>
       </div>
     </footer>
+
+    <!-- Modal window -->
+
     <div class="modal-bg is-hidden" data-modal>
       <div class="modal-window">
         <button type="button" class="btn-close" data-modal-close>
@@ -454,6 +469,30 @@
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
+        <form name="get-contacts-form">
+          <p class="get-contacts-form-name">Залиште свої дані, ми вам передзвонимо</p>
+          <label class="form-item">
+            <input type="text" name="user-name" />
+            <span>Ім'я</span>
+          </label>
+          <label class="form-item">
+            <input type="tel" name="user-tel" />
+            <span>Телефон</span>
+          </label>
+          <label class="form-item">
+            <input type="email" name="user-email" />
+            <span>Пошта</span>
+          </label>
+          <label class="form-item">
+            <textarea name="comment" cols="30" rows="6"></textarea>
+            <span>Коментар</span>
+          </label>
+          <label class="form-item">
+            <input type="radio" name="policy" value="agreed" />
+            <span>Погоджуюся з розсилкою та приймаю <a href="">Умови договору</a></span>
+          </label>
+          <button type="submit" class="button">Відправити</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
