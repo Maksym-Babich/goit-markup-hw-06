@@ -771,8 +771,10 @@ a {
 
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
+  visibility: visible;
 
-  transition: opacity var(--anim-func) var(--anim-time);
+  transition: opacity var(--anim-func) var(--anim-time),
+    visibility var(--anim-func) var(--anim-time);
 }
 
 .modal-window {
@@ -784,7 +786,7 @@ a {
   padding: 40px;
   transform: translate(-50%, -50%) scale(1, 1);
   background-color: #ffffff;
-  transition: scale var(--anim-time) var(--anim-func), transform var(--anim-time) var(--anim-func);
+  transition: transform var(--anim-time) var(--anim-func);
 }
 
 .btn-close {
@@ -812,10 +814,6 @@ a {
 .btn-close:hover,
 .btn-close:focus {
   color: var(--active-color);
-}
-
-.btn-close:active {
-  background-color: var(--text-color);
 }
 
 .is-hidden {
@@ -862,7 +860,8 @@ a {
   transition: border var(--anim-time) var(--anim-func);
 }
 
-.form-fields input:focus {
+.form-fields input:focus,
+.form-fields input:hover {
   border: 1px solid var(--active-color);
 }
 
@@ -877,7 +876,8 @@ a {
   transition: border var(--anim-time) var(--anim-func);
 }
 
-.form-item textarea:focus {
+.form-item textarea:focus,
+.form-item textarea:hover {
   border: 1px solid var(--active-color);
 }
 
@@ -919,6 +919,10 @@ a {
 }
 
 .policy-agreement input:focus ~ .checkbox {
+  border-color: var(--active-color);
+}
+
+.policy-agreement:hover .checkbox {
   border-color: var(--active-color);
 }
 
@@ -970,6 +974,10 @@ a {
 }
 
 .input-field:focus-within {
+  color: var(--active-color);
+}
+
+.form-item:hover .input-field {
   color: var(--active-color);
 }
 
